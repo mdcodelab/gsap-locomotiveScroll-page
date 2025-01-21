@@ -111,4 +111,18 @@ h6 {
 }
 }
 
+.section-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #626262;
+}
+
+.about-section p {
+  
+    font-size: 70px;
+
+  
+}
+
 
