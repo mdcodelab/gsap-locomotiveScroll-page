@@ -47,14 +47,18 @@ function Gallery() {
 const [activeImage, setActiveImage]=useState(1); //current index
 
   return (
-    <section className="section wrapper gallery wrap">
+    <section className="section wrapper gallery-wrap">
       <div className="gallery">
-        <div className="gallery-container">
+        <div className="gallery-counter" style={{border: "4px solid black"}}>
+        <span>{activeImage}</span>
+        <span className="divider"></span>
+        <span>{images.length}</span>
+        </div>
+
           {images.map((image, index)=> {
             return <GalleryItem index={index} key={image.src} {...image}
             updateImage = {(index)=> setActiveImage(index+1)}></GalleryItem>
           })}
-        </div>
       </div>
     </section>
   )
