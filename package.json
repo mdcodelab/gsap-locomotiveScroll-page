@@ -5,9 +5,18 @@
     "start": "react-scripts start"
   },
   "dependencies": {
+<<<<<<< HEAD
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "^5.0.1"
+=======
+    "aos": "^2.3.4",
+    "gsap": "^3.12.7",
+    "locomotive-scroll": "^4.1.4",
+    "next": "15.1.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+>>>>>>> d65d233 (About, Footer)
   },
   "browserslist": {
     "production": [
