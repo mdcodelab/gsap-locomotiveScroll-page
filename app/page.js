@@ -7,9 +7,13 @@ import Featured from './(components)/Featured';
 import About from './(components)/About';
 import Gallery from './(components)/Gallery';
 import Footer from './(components)/Footer';
+import useLocoScroll from './useLocoScroll';
+import "locomotive-scroll/dist/locomotive-scroll.css";
+
 
 function Home() {
-  const [preloader, setPreloader]=useState(true);
+  const [preloader, setPreloader]=useState(false);
+
   const[timer, setTimer]=useState(3);
   const id=useRef();
 const clear= ()=> {
@@ -31,6 +35,7 @@ useEffect(()=> {
   }
 }, [timer]);
 
+useLocoScroll(!preloader);
 
   return (
     <>
@@ -42,7 +47,7 @@ useEffect(()=> {
       ) 
       : 
       (
-        <div className="main-container" id="main-container">
+        <div className="main-container" id="main-container" data-scroll-container>
       <Navbar></Navbar>
       <Header></Header>
       <Featured></Featured>

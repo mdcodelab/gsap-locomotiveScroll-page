@@ -3,9 +3,9 @@ import SectionHeader from './SectionHeader';
 
 function Footer() {
   return (
-    <section className="footer">
+    <section className="footer" data-scroll-section>
       <SectionHeader title="Made in"></SectionHeader>
-      <h1 className="location" id="location-text">Rio de Janeiro</h1>
+      <h1 className="location" id="location-text" data-scroll>Rio de Janeiro</h1>
     </section>
   )
 }

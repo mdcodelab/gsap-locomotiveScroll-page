@@ -47,7 +47,7 @@ function Gallery() {
 const [activeImage, setActiveImage]=useState(1); //current index
 
   return (
-    <section className="section wrapper gallery-wrap">
+    <section className="section wrapper gallery-wrap" data-scroll-section>
       <div className="gallery">
         <div className="gallery-counter" style={{border: "4px solid black"}}>
         <span>{activeImage}</span>

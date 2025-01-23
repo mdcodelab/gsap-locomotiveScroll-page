@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className="navbar">
+    <div className="navbar" data-scroll-section>
       <div>Menu</div>
       <div>Flirty Flowers</div>
       <div>Cart</div>

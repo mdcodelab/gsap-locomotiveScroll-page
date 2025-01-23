@@ -2,8 +2,8 @@ import React from 'react'
 
 function Featured() {
   return (
-    <section className="featured-section">
-      <div className="featured-row-layout">
+    <section className="featured-section" data-scroll-section>
+      <div className="featured-row-layout" data-scroll>
         <h6>White Lily</h6>
         <img src="/images/image-2.jpg" alt="white lily"></img>
       </div>
