@@ -12,7 +12,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 
 
 function Home() {
-  const [preloader, setPreloader]=useState(false);
+  const [preloader, setPreloader]=useState(true);
 
   const[timer, setTimer]=useState(3);
   const id=useRef();
