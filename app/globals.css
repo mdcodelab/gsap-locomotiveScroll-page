@@ -56,6 +56,7 @@ section {
     letter-spacing: 1px;
     color: #626262;
     text-transform: uppercase;
+    overflow: hidden;
   }
   li {
     margin: 10px 0;
@@ -63,11 +64,16 @@ section {
   }
 }
 
+.header-container span {
+  display: block;
+}
+
 #header-text {
-  font-size: 18vw;
+  font-size: 15vw;
   text-transform: uppercase;
   text-align: center;;
   font-weight: 600;
+  position: relative;
 }
 
 .featured-section {
