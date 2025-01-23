@@ -1,3 +1,5 @@
+"use client";
+import { useState, useRef, useEffect} from 'react';
 import React from 'react';
 import Navbar from './(components)/Navbar';
 import Header from './(components)/Header';
@@ -7,9 +9,40 @@ import Gallery from './(components)/Gallery';
 import Footer from './(components)/Footer';
 
 function Home() {
+  const [preloader, setPreloader]=useState(true);
+  const[timer, setTimer]=useState(3);
+  const id=useRef();
+const clear= ()=> {
+  window.clearInterval(id.current);
+  setPreloader(false);
+}
+
+//when the component mounts
+useEffect(()=> {
+id.current = window.setInterval(()=> {
+setTimer(timer => timer-1);
+}, 1000)
+}, []);
+
+//when the timer changes
+useEffect(()=> {
+  if(timer===0) {
+    clear();
+  }
+}, [timer]);
+
+
   return (
     <>
-      <div className="main-container" id="main-container">
+      {preloader ? (
+        <div className="loader-wrapper absolute" ref={id}>
+          <h2>Flirty Flowers</h2>
+          <h2>Rio de Janeiro</h2>
+        </div>
+      ) 
+      : 
+      (
+        <div className="main-container" id="main-container">
       <Navbar></Navbar>
       <Header></Header>
       <Featured></Featured>
@@ -17,6 +50,7 @@ function Home() {
       <Gallery></Gallery>
       <Footer></Footer>
     </div>
+      )}
     </>
   )
 }

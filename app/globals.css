@@ -237,4 +237,50 @@ position: relative;
   height: auto;
 }
 
+.footer {
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.location {
+  font-size: 18vw;
+}
+
+.loader-wrapper {
+  display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+width: 100%;
+height: 100%;
+background: black;
+color: white;
+}
+
+.loader-wrapper h1 {
+    font-weight: 600;
+    font-size: 1.6vw;
+    text-transform: uppercase;
+    text-style: normal;
+}
+
+.loader-wrapper h2 {
+  font-weight: 600;
+  font-size: 1.6vw;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+
+
+.absolute {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
+}
+
+
+
 
